@@ -28,7 +28,7 @@ Your feedback and contributions are highly appreciated as the package stabilizes
 You can install the package via Composer:
 
 ```bash
-composer require bensondevs/laravel-midtrans
+composer require bensondevs/laravel-midtrans:^0.1@alpha
 ```
 
 If you want to publish the config file:
