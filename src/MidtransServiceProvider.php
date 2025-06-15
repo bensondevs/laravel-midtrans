@@ -30,8 +30,8 @@ class MidtransServiceProvider extends ServiceProvider
             );
 
             $this->publishes([
-                __DIR__.'/../database/migrations/create_gopay_accounts_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_gopay_accounts_table.php'),
-                __DIR__.'/../database/migrations/create_registered_cards_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_registered_cards_table.php'),
+                __DIR__.'/../database/migrations/create_gopay_accounts_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_gopay_accounts_table.php'),
+                __DIR__.'/../database/migrations/create_registered_cards_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_registered_cards_table.php'),
             ], 'midtrans-migrations');
         }
     }
