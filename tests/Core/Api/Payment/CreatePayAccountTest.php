@@ -5,13 +5,12 @@ use Bensondevs\Midtrans\Enums\PaymentType;
 
 it('can create a GoPay partner pay account', function () {
     $createPayAccount = CreatePayAccount::make(PaymentType::Gopay->getKey())
-        ->setGopayPartnerPhoneNumber('1234500015')
-        ->setGopayPartnerCountryCode('62')
+        ->setGopayPartnerPhoneNumber('08123123123')
+//        ->setGopayPartnerCountryCode('62')
         ->setGopayPartnerRedirectUrl('https://www.gojek.com');
 
-    $response = $createPayAccount->send();
-    dd($response);
-
+    $createPayAccount->send();
+    dd($createPayAccount->getResponseData());
     expect($createPayAccount->getResponseStatus())->toBe(200);
 
     /*expect($createPayAccount->getResponseStatus())->toBe(201)

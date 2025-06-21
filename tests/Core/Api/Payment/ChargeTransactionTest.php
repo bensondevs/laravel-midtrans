@@ -8,6 +8,7 @@ it('can charge transaction properly', function () {
         'grossAmount' => 100_000,
     ]);
     $chargeTransaction->send();
+    dd($chargeTransaction);
 
     expect($chargeTransaction->getResponseStatus())->toBe(200);
 
